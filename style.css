@@ -162,7 +162,7 @@ button{
         cursor: pointer;
     }
 
-    #links{
+    .links{
         display: none; 
         position: absolute; 
         min-width: 160px;
@@ -172,12 +172,12 @@ button{
         border-radius: 10px;
     }
 
-    #links a{
+    .links a{
         width: 100%;
         text-align: center;
     }
 
-    #linksM:hover #links{
+    #linksM:hover .links{
         display: flex;
     }
 }
@@ -188,6 +188,11 @@ main{
     min-height: 50vh;
     margin-bottom: var(--rc-margin-section);
     padding: 15px;
+}
+
+main > h2{
+    width: 100%;
+    text-align: center;
 }
 
 .card{

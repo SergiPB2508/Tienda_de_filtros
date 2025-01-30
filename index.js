@@ -97,10 +97,15 @@ const zapatos = [
     },
 ]
 
-function imprZapatos(x) {
+function imprZapatos(array, msg) {
     const main = document.querySelector("main");
     main.innerHTML = "";
-    for(const zapato of x){
+
+    if (msg != "") {
+        main.innerHTML = `<h2>${msg}</h2>`;
+    }
+
+    for(const zapato of array){
         main.innerHTML += `<div class="card flex">
                                 <div class="img flex">
                                     <img src="${zapato.img}" alt="${zapato.modelo}">
@@ -122,6 +127,7 @@ function filter() {
     let precio = document.getElementById("precio").value;
     
     let filt;
+    let msg = "";
 
     if (precio != 0 && marca != "all") {
         filt = zapatos.filter((e) => e.precio <= precio && e.marca.toLowerCase().includes(marca));
@@ -133,10 +139,11 @@ function filter() {
 
     if (filt == "") {
         filt = [...zapatos].sort(() => Math.random() - 0.5).slice(0, 3);
+        msg = "Productos Sugeridos";
     }
     
     if (filt != undefined) {
-        imprZapatos(filt);
+        imprZapatos(filt, msg);
     }
 
 }
@@ -145,7 +152,7 @@ function limpiar() {
     document.getElementById("marca").value = "all";
     document.getElementById("precio").value = "";
 
-    imprZapatos(zapatos);
+    imprZapatos(zapatos, "");
 }
 
 document.addEventListener("click", (e) => {
@@ -170,8 +177,7 @@ document.addEventListener("click", (e) => {
             btn[1].src = "img/icon_arrow.png";
         }
     }
-    
 
 });
 
-imprZapatos(zapatos);
+imprZapatos(zapatos, "");
