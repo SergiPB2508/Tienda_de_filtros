@@ -23,41 +23,40 @@
                 <a href="">Niños</a>
                 <a href="">Ofertas</a>
             </div>
+            <div id="linksM" class="flex">
+                <img src="img/icon_menu.png" alt="menu" >
+                <div id="links" class="flex">
+                    <a href="">Hombre</a>
+                    <a href="">Mujer</a>
+                    <a href="">Niños</a>
+                    <a href="">Ofertas</a>
+                </div>
+            </div>
             <div id="icon" class="flex">
-                <img src="img/icon_filter.png" alt="filter">
-                <img src="img/icon_basket.png" alt="basket">
-                <img src="img/icon_User.png" alt="profile">
+                <img src="img/icon_filter1.png" alt="filter" class="btn filter">
+                <img src="img/icon_basket.png" alt="basket" class="btn">
+                <img src="img/icon_User.png" alt="profile" class="btn">
             </div>
         </nav>
         <div id="background"></div>
-        <div id="filter" class="flex">
-            <form>
-                <input type="text">
-                <input type="text">
-                <button>Filtrar</button>
-                <button>Limpiar</button>
+        <div id="filter">
+            <form id="form" class="none">
+                <select id="marca">
+                    <option value="all" selected>Todas las Marcas</option>
+                    <option value="nike">Nike</option>
+                    <option value="new">New Balance</option>
+                    <option value="adidas">Adidas</option>
+                </select>
+                <input type="number" placeholder="Precio Máximo" id="precio">
+                <button type="button" onclick="filter()">Filtrar</button>
+                <button type="button" onclick="limpiar()">Limpiar</button>
             </form>
-            <div>
-                <img src="img/icon_arrow.png" alt="arrow">
+            <div class="flex">
+                <img src="img/icon_arrow.png" alt="arrow" class="btn filter">
             </div>
         </div>
     </header>
     <main class="flex">
-
-        <div class="card">
-            <img src="" alt="zapato">
-            <div>
-                <div>
-                    <p>Marca</p>
-                    <div>
-                        <p>Model</p>
-                        <p>preu</p>
-                    </div>
-                </div>
-                <button>Comprar</button>
-            </div>
-        </div>
-
     </main>
     <footer class="flex">
         <div class="flex">
